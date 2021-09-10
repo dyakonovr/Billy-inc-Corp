@@ -1,1 +1,4 @@
-// @include font-face("Muller", "../fonts/MullerRegular", 400, normal);
+@import "./vars";
+
+@include font-face(var(--font-family), "../fonts/pt-serif-regular", 400, normal);
+@include font-face(var(--font-family), "../fonts/pt-serif-bold", 700, normal);

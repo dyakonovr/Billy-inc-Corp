@@ -1,0 +1,13 @@
+.projects {
+  height: 405px;
+  background-color: var(--color-primary);
+
+  &__container {
+    padding: 100px 0 0;
+  }
+
+  &__title {
+    margin: 0 0 var(--big-offset) 0;
+    color: var(--color-white);
+  }
+}

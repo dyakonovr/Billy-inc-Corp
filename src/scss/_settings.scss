@@ -1,3 +1,5 @@
+@import "./vars";
+
 html {
   box-sizing: border-box;
 }
@@ -10,7 +12,7 @@ html {
 
 body {
   margin: 0;
-  font-family: "asd", sans-serif;
+  font-family: var(--font-family), sans-serif;
 }
 
 img {
@@ -19,6 +21,7 @@ img {
 
 a {
   text-decoration: none;
+  color: var(--color-black);
 }
 
 .site-container {
@@ -44,8 +47,8 @@ a {
 
 .container {
   margin: 0 auto;
-  padding: 0 15px;
-  max-width: 1200px;
+  padding: 0 20px;
+  max-width: 1240px;
 }
 
 .js-focus-visible :focus:not(.focus-visible) {
