@@ -1,6 +1,4 @@
 .projects {
-  margin-bottom: 100px;
-  height: 405px;
   background-color: var(--color-primary);
 
   &__container {
@@ -12,20 +10,27 @@
     color: var(--color-white);
   }
 
+  &__wrapper {
+    display: flex;
+  }
+
   &__swiper {
+    position: relative;
+    top: var(--big-offset);
     overflow: hidden;
     width: calc(450px * 2);
   }
 
   &__slide {
     padding: var(--average-offset);
-    box-shadow: 0 62px 108px rgba(8, 9, 16, 0.15);
+    height: 225px;
     box-sizing: border-box;
     background: var(--color-woodsmoke);
   }
 
   &__upper {
     display: flex;
+    align-items: center;
     width: 100%;
   }
 
@@ -37,13 +42,9 @@
 
   &__btn {
     margin: 0 0 0 auto;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 0 var(--middle-offset);
-    width: 130px;
-    height: 40px;
+    padding: var(--small-offset) var(--middle-offset);
     font: var(--font-regular);
     color: var(--color-white);
-    background: transparent;
   }
 
   &__descr {
@@ -51,5 +52,67 @@
     font: var(--font-regular);
     font-size: 17px;
     color: var(--color-shuttle-gray);
+  }
+
+  &__right {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 0 var(--big-offset);
+    padding: var(--big-offset) 0 0;
+    width: calc(100% - 900px - var(--big-offset) - var(--small-offset));
+  }
+
+  &__btns {
+    display: flex;
+    width: 100%;
+    height: 70px;
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    position: relative;
+    left: 0;
+    right: 0;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    height: 70px;
+
+    &::after {
+      font-size: 20px;
+      color: var(--color-white);
+      opacity: 0.3;
+      transition: opacity 0.3s ease-in-out;
+    }
+
+    &:hover {
+      &::after {
+        opacity: 1;
+      }
+    }
+  }
+
+  .swiper-button-next {
+    margin: 0 0 0 var(--small-offset);
+  }
+
+  .swiper-button-disabled {
+    opacity: 1;
+  }
+
+  .swiper-pagination {
+    position: relative;
+
+    &-bullet {
+      border-radius: 0;
+      width: 30px;
+      height: 2px;
+      background-color: var(--color-white);
+
+      &:not(:last-child) {
+        margin: 0 5px 0 0;
+      }
+    }
   }
 }

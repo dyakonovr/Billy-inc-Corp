@@ -6,14 +6,26 @@
 
 // подключения компонентов страницы
 @import "./components/header";
-@import "./components/tagline";
+@import "./components/idx-tagline";
 @import "./components/idx-info";
 @import "./components/idx-strengths";
 @import "./components/idx-projects";
+@import "./components/idx-news";
 
 // универсальные стили
 
 .title {
   font: var(--font-regular);
   font-size: 52px;
+}
+
+.btn {
+  &--transparent {
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: border 0.3s ease-in-out;
+
+    &:hover {
+      border: 1px solid var(--color-white);
+    }
+  }
 }
