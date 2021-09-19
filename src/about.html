@@ -15,13 +15,13 @@
 
 <body>
   <div class="site-container">
+    @include('partials/header.html')
     <main>
-      @include('partials/idx-tagline.html')
-      @include('partials/idx-info.html')
-      @include('partials/idx-strengths.html')
-      @include('partials/idx-projects.html')
-      @include('partials/idx-news.html')
-      @include('partials/idx-partners.html')
+      <section class="about">
+        <div class="container">
+          <h1 class="about__title title">О нас</h1>
+        </div>
+      </section>
     </main>
     @include('partials/footer.html')
   </div>

@@ -51,19 +51,9 @@
     position: absolute;
     left: 0;
     bottom: var(--big-offset);
-    border: 1px solid var(--color-primary);
+    border: 1px solid transparent;
     padding: var(--small-offset);
-    color: var(--color-primary);
-
-    &::after {
-      content: "";
-      display: inline-block;
-      margin: 0 0 0 var(--small-offset);
-      width: 12px;
-      height: 9px;
-      background-image: url("../img/arrow-right.svg");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
+    color: var(--color-white);
+    background-color: var(--color-primary);
   }
 }
