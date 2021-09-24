@@ -6,14 +6,25 @@
 
 // подключения компонентов страницы
 @import "./components/header";
+
+// index.html
 @import "./components/idx-tagline";
 @import "./components/idx-info";
 @import "./components/idx-strengths";
 @import "./components/idx-projects";
 @import "./components/idx-news";
 @import "./components/idx-partners";
+
+// about.html
 @import "./components/about";
+
+// reg.html
 @import "./components/reg";
+
+// news.html
+@import "./components/news";
+
+//
 @import "./components/footer";
 
 // универсальные стили
@@ -55,5 +66,53 @@
   &::after {
     top: 3px;
     transform: rotate(135deg);
+  }
+}
+
+.news-item {
+  display: block;
+  width: 100%;
+  background-color: var(--color-white);
+  transition: background-color 0.3s ease-in-out;
+
+  &:not(:last-child) {
+    margin: 0 0 var(--big-offset) 0;
+  }
+
+  &__container {
+    padding: var(--big-offset);
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+  &__title {
+    font: var(--font-regular);
+    font-size: 26px;
+    line-height: 28px;
+    color: var(--color-woodsmoke);
+    transition: color 0.3s ease-in-out;
+  }
+
+  &__descr {
+    margin: var(--middle-offset) 0 var(--big-offset) 0;
+    font: var(--font-regular);
+    font-size: 19px;
+    color: var(--color-shuttle-gray);
+  }
+
+  &__date {
+    font: var(--font-regular);
+    font-size: 19px;
+    color: var(--color-silver);
+  }
+
+  &:hover {
+    background-color: transparent;
+
+    .news-item__title {
+      color: var(--color-primary);
+    }
   }
 }
