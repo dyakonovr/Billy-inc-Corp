@@ -70,8 +70,26 @@
     background-color: var(--color-primary);
     transition: background-color 0.3s ease-in-out;
 
+    &::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0 0 var(--small-offset);
+      width: 36px;
+      height: 18px;
+      background-image: url("../img/arrow-right.svg");
+      background-position: -5px 0;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      transition: background-position 0.3s ease-in-out;
+    }
+
     &:hover {
       background-color: var(--color-primary-hover);
+
+      &::after {
+        background-position: 0 0;
+      }
     }
   }
 }

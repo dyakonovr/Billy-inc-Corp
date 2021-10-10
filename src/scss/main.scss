@@ -24,6 +24,9 @@
 // news.html
 @import "./components/news";
 
+// item.html
+@import "./components/item";
+
 //
 @import "./components/footer";
 
@@ -32,41 +35,6 @@
 .title {
   font: var(--font-regular);
   font-size: 52px;
-}
-
-.arrow {
-  position: relative;
-  display: inline-block;
-  margin: 0 0 0 var(--small-offset);
-  width: 20px;
-  background-color: var(--color-white);
-  transition: width 0.3s ease-in-out;
-
-  &,
-  &::before,
-  &::after {
-    height: 1px;
-    background-color: var(--color-white);
-  }
-
-  &::before,
-  &::after {
-    content: "";
-    position: absolute;
-    right: -3px;
-    display: block;
-    width: 11px;
-  }
-
-  &::before {
-    top: -4px;
-    transform: rotate(45deg);
-  }
-
-  &::after {
-    top: 3px;
-    transform: rotate(135deg);
-  }
 }
 
 .news-item {
@@ -102,12 +70,6 @@
     color: var(--color-shuttle-gray);
   }
 
-  &__date {
-    font: var(--font-regular);
-    font-size: 19px;
-    color: var(--color-silver);
-  }
-
   &:hover {
     background-color: transparent;
 
@@ -115,4 +77,14 @@
       color: var(--color-primary);
     }
   }
+}
+
+.custom-container {
+  max-width: 1040px;
+}
+
+.date {
+  font: var(--font-regular);
+  font-size: 19px;
+  color: var(--color-silver);
 }

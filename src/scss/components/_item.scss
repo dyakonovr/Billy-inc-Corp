@@ -1,0 +1,111 @@
+.item {
+  padding-bottom: 100px;
+
+  &__title {
+    margin: var(--big-offset) 200px 0 0;
+  }
+
+  &__img {
+    display: block;
+    margin: var(--average-offset) 0 var(--big-offset);
+    width: 100%;
+  }
+
+  &__text {
+    font: var(--font-regular);
+    font-size: 18px;
+    color: var(--color-woodsmoke);
+
+    &--highlight {
+      font-weight: 700;
+    }
+  }
+
+  &-table {
+    border-spacing: 0 5px;
+    width: 100%;
+
+    &__upper {
+      background-color: var(--color-primary);
+    }
+
+    &__category {
+      padding: var(--middle-offset) 0;
+      font: var(--font-regular);
+      font-size: 17px;
+      color: var(--color-white);
+    }
+
+    &__lower {
+      background-color: var(--color-alabaster);
+    }
+
+    &__subtitle {
+      font: var(--font-regular);
+      font-size: 23px;
+    }
+
+    &__text {
+      padding: var(--middle-offset) 0;
+      font: var(--font-regular);
+      font-size: 23px;
+    }
+  }
+
+  &__list {
+    margin: var(--average-offset) 0;
+  }
+
+  &__paragraph {
+    font: var(--font-regular);
+    font-size: 19px;
+    color: var(--color-woodsmoke);
+
+    &::before {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 var(--middle-offset) 0 0;
+      width: 17px;
+      height: 15px;
+      background-image: url("../img/diamond-small.svg");
+      background-size: 100%;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__link {
+    display: inline-block;
+    margin: var(--big-offset) 0 0;
+    border: none;
+    padding: var(--small-offset);
+    min-width: 190px;
+    font: var(--font-regular);
+    color: var(--color-white);
+    background-color: var(--color-primary);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0 0 var(--small-offset);
+      width: 27px;
+      height: 18px;
+      background-image: url("../img/arrow-right.svg");
+      background-position: -8px 0;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      transition: background-position 0.3s ease-in-out;
+    }
+
+    &:hover {
+      opacity: 0.8;
+
+      &::after {
+        background-position: -2px 0;
+      }
+    }
+  }
+}

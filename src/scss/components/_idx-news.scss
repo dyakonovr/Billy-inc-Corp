@@ -13,15 +13,45 @@
   &__left {
     position: relative;
     margin: 0 var(--average-offset) 0 0;
+    width: calc(50% - var(--average-offset));
+  }
+
+  &__right {
+    width: calc(50% - var(--average-offset));
   }
 
   &__btn {
     position: absolute;
     left: 0;
     bottom: var(--big-offset);
-    border: 1px solid transparent;
+    border: none;
     padding: var(--small-offset);
+    min-width: 135px;
     color: var(--color-white);
     background-color: var(--color-primary);
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 0 0 var(--small-offset);
+      width: 27px;
+      height: 16px;
+      background-image: url("../img/arrow-right.svg");
+      background-position: -10px 0;
+      background-size: 100%;
+      background-repeat: no-repeat;
+      transition: background-position 0.3s ease-in-out;
+    }
+
+    &:hover {
+      opacity: 0.8;
+
+      &::after {
+        background-position: -3px 0;
+      }
+    }
   }
 }
