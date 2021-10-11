@@ -10,6 +10,11 @@ html {
   box-sizing: inherit;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: var(--font-family), sans-serif;
@@ -25,7 +30,14 @@ a {
 }
 
 .site-container {
+  display: flex;
+  flex-direction: column;
   overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  min-height: 100%;
+}
+
+main {
+  flex: 1 1 auto;
 }
 
 .is-hidden {
