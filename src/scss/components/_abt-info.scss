@@ -1,0 +1,27 @@
+.main-about {
+  padding: 150px 0 90px;
+  background-color: var(--color-about-bg);
+}
+
+.about {
+  &__info {
+    display: flex;
+  }
+
+  &__title {
+    margin: 0 0 var(--big-offset);
+  }
+
+  &__text {
+    margin: 0 var(--middle-offset) 0 0;
+    font: var(--font-regular);
+    font-size: 20px;
+    line-height: 34px;
+    color: var(--color-woodsmoke);
+  }
+
+  &__img {
+    margin: 0 calc(var(--big-offset) * -1) 0 0;
+    width: 60%;
+  }
+}

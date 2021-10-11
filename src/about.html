@@ -16,10 +16,26 @@
 <body>
   <div class="site-container">
     @include('partials/header.html')
-    <main>
+    <main class="main-about">
       <section class="about">
-        <div class="container">
+        <div class="container custom-container">
           <h1 class="about__title title">О нас</h1>
+          @include('partials/abt-info.html')
+        </div>
+      </section>
+      <section class="directions">
+        <div class="container custom-container directions__container">
+          @include('partials/abt-directions.html')
+        </div>
+      </section>
+      <section class="guarantee">
+        <div class="container custom-container guarantee__container">
+          @include('partials/abt-guarantee.html')
+        </div>
+      </section>
+      <section class="conclusion">
+        <div class="container custom-container conclusion__container">
+          @include('partials/abt-conclusion.html')
         </div>
       </section>
     </main>
