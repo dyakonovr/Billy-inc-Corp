@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .strengths {
   position: relative;
   padding: var(--big-offset) 0 300px;
@@ -52,17 +54,14 @@
     color: var(--color-white);
 
     &--first {
-      left: -150px;
       top: -20px;
     }
 
     &--second {
-      right: -150px;
       top: -20px;
     }
 
     &--third {
-      left: -150px;
       bottom: -50px;
     }
 
@@ -75,6 +74,24 @@
       left: 50%;
       bottom: -170px;
       transform: translateX(-50%);
+    }
+
+    &--left {
+      left: -150px;
+    }
+
+    &--right {
+      right: -150px;
+    }
+
+    @include large-screen {
+      &--left {
+        left: -100px;
+      }
+
+      &--right {
+        right: -100px;
+      }
     }
   }
 }

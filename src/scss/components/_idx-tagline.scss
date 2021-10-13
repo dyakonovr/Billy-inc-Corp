@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .tagline {
   position: relative;
   padding: 0 0 150px;
@@ -119,18 +121,28 @@
   &__nav {
     position: relative;
     width: calc(100% - 405px);
+    background-color: var(--color-alabaster);
+
+    @include xlarge-screen {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
   }
 
   &__list {
     display: flex;
     align-items: center;
     height: 100%;
+
+    @include xlarge-screen {
+      display: none;
+    }
   }
 
   &__item {
     width: calc(100% / 3);
     height: 100%;
-    background-color: var(--color-alabaster);
 
     &:hover .tagline__sub-list {
       opacity: 1;
@@ -242,5 +254,14 @@
 
   &__inner-list {
     padding-inline-start: 20px;
+  }
+
+  &__burger {
+    display: none;
+
+    @include xlarge-screen {
+      display: block;
+      margin: 0 var(--big-offset) 0 0;
+    }
   }
 }

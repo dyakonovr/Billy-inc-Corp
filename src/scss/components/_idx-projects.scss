@@ -1,8 +1,10 @@
+@import "../mixins";
+
 .projects {
   background-color: var(--color-primary);
 
   &__container {
-    padding: 100px 0 0;
+    padding: 100px 20px 0;
   }
 
   &__title {
@@ -19,11 +21,19 @@
     top: var(--big-offset);
     overflow: hidden;
     width: calc(450px * 2);
+
+    @include xlarge-screen {
+      width: calc(350px * 2);
+    }
+
+    @include large-screen {
+      width: 100%;
+    }
   }
 
   &__slide {
     padding: var(--average-offset);
-    height: 225px;
+    min-height: 225px;
     box-sizing: border-box;
     background: var(--color-woodsmoke);
   }
@@ -38,6 +48,10 @@
     font: var(--font-regular);
     font-size: 32px;
     color: var(--color-white);
+
+    @include xlarge-screen {
+      font-size: 20px;
+    }
   }
 
   &__btn {
@@ -71,6 +85,10 @@
         background-position: 0 0;
       }
     }
+
+    @include xlarge-screen {
+      padding: var(--small-offset);
+    }
   }
 
   &__descr {
@@ -87,6 +105,14 @@
     margin: 0 0 0 var(--big-offset);
     padding: var(--big-offset) 0 0;
     width: calc(100% - 900px - var(--big-offset) - var(--small-offset));
+
+    @include xlarge-screen {
+      width: calc(100% - 350px * 2 - var(--big-offset) - var(--small-offset));
+    }
+
+    @include large-screen {
+      display: none;
+    }
   }
 
   &__btns {

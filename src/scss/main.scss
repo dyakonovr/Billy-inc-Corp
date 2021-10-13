@@ -91,3 +91,56 @@
   font-size: 19px;
   color: var(--color-silver);
 }
+
+.burger {
+  border: none;
+  transform: rotate(180deg);
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    content: "";
+    display: block;
+    margin-left: -6px;
+  }
+
+  &::before {
+    margin-top: 13px;
+    width: calc(var(--burger-width) / 2);
+  }
+
+  &,
+  &::before,
+  &::after {
+    height: 2px;
+    background-color: var(--color-black);
+  }
+
+  &,
+  &::after {
+    width: 27px;
+  }
+
+  &::after {
+    margin-top: -8px;
+  }
+
+  &--active {
+    &::before {
+      top: 50%;
+      transform: rotate(45deg);
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+
+    &::after {
+      top: 50%;
+      transform: rotate(-45deg);
+      transition: transform 0.3s ease-in-out, top 0.3s ease-in-out;
+    }
+
+    .burger__line {
+      transform: scale(0);
+      transition: transform 0.3s ease-in-out;
+    }
+  }
+}

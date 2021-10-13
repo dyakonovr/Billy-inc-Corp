@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .footer {
   padding: 150px 0 100px;
   background-color: var(--color-woodsmoke);
@@ -5,6 +7,18 @@
   &__container {
     display: flex;
     justify-content: space-between;
+
+    @include large-screen {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__left {
+    @include large-screen {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+    }
   }
 
   &__copyright {
@@ -36,6 +50,10 @@
 
   &__bottom {
     max-width: 210px;
+
+    @include large-screen {
+      margin: 0 var(--big-offset) 0 0;
+    }
   }
 
   &-ref {
@@ -103,5 +121,9 @@
     .footer__item {
       color: var(--color-emperor);
     }
+  }
+
+  @include large-screen {
+    padding: var(--big-offset) 0;
   }
 }
