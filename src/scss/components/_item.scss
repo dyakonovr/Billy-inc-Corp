@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .item {
   padding-bottom: 100px;
 
@@ -21,6 +23,39 @@
     }
   }
 
+  &__wrapper {
+    overflow-x: auto;
+    overflow-y: hidden;
+
+    @include medium-screen {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: block;
+        width: 100px;
+        height: 100px;
+        background-image: url("../img/other/scroll-icon.png");
+        background-size: 100%;
+        background-repeat: no-repeat;
+        transform: translate(-50%, -50%);
+      }
+    }
+  }
+
   &-table {
     border-spacing: 0 5px;
     width: 100%;
@@ -34,6 +69,10 @@
       font: var(--font-regular);
       font-size: 17px;
       color: var(--color-white);
+
+      @include medium-screen {
+        font-size: 15px;
+      }
     }
 
     &__lower {
@@ -41,14 +80,27 @@
     }
 
     &__subtitle {
+      padding: 0 0 0 var(--average-offset);
       font: var(--font-regular);
       font-size: 23px;
+
+      @include medium-screen {
+        font-size: 18px;
+      }
     }
 
     &__text {
       padding: var(--middle-offset) 0;
       font: var(--font-regular);
       font-size: 23px;
+
+      @include medium-screen {
+        font-size: 18px;
+      }
+    }
+
+    @include medium-screen {
+      min-width: 576px;
     }
   }
 

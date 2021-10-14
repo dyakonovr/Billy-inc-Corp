@@ -9,25 +9,52 @@
   &__wrapper {
     display: flex;
     margin: var(--big-offset) 0;
+
+    @include xlarge-screen {
+      justify-content: space-evenly;
+    }
+
+    @include medium-screen {
+      flex-direction: column;
+    }
   }
 
   &__left {
     margin: 0 var(--big-offset) 0 0;
     max-width: calc(50% - var(--big-offset));
+
+    @include medium-screen {
+      margin: 0 0 var(--big-offset);
+      width: 100%;
+      max-width: none;
+    }
   }
 
   &__right {
     max-width: calc(50% - var(--big-offset));
+
+    @include medium-screen {
+      width: 100%;
+      max-width: none;
+    }
   }
 
   &__pages {
     display: flex;
     align-items: baseline;
+
+    @include small-screen {
+      flex-wrap: wrap;
+    }
   }
 
   &__item {
     &:not(:last-child) {
       margin: 0 var(--average-offset) 0 0;
+    }
+
+    @include small-screen {
+      margin: 0 var(--average-offset) var(--average-offset) 0;
     }
   }
 
