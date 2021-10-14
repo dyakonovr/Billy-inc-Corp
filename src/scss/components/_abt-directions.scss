@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .directions {
   margin: var(--big-offset) 0 0;
 
@@ -16,6 +18,14 @@
       width: 117px;
       height: 117px;
       background-image: url("../img/diamond-abt-1.svg");
+
+      @include small-screen {
+        display: none;
+      }
+    }
+
+    @include small-screen {
+      padding: var(--average-offset) var(--average-offset);
     }
   }
 

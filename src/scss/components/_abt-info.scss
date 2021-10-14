@@ -1,15 +1,26 @@
+@import "../mixins";
+
 .main-about {
   padding: 150px 0 90px;
   background-color: var(--color-about-bg);
+
+  @include large-screen {
+    padding: var(--big-offset) 0 90px;
+  }
 }
 
 .about {
   &__info {
+    position: relative;
     display: flex;
   }
 
   &__title {
     margin: 0 0 var(--big-offset);
+
+    @include medium-screen {
+      margin: 0 0 var(--average-offset);
+    }
   }
 
   &__text {
@@ -18,10 +29,32 @@
     font-size: 20px;
     line-height: 34px;
     color: var(--color-woodsmoke);
+
+    @include large-screen {
+      z-index: 1;
+      max-width: 400px;
+    }
+
+    @include medium-screen {
+      margin: 0;
+      max-width: none;
+    }
   }
 
   &__img {
     margin: 0 calc(var(--big-offset) * -1) 0 0;
     width: 60%;
+
+    @include large-screen {
+      position: absolute;
+      right: calc(var(--big-offset) * -2);
+      top: 0;
+      z-index: 0;
+      width: 70%;
+    }
+
+    @include medium-screen {
+      display: none;
+    }
   }
 }

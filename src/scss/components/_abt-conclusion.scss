@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .conclusion {
   &__container {
     position: relative;
@@ -9,6 +11,10 @@
     top: -20px;
     width: 392px;
     height: 339px;
+
+    @include xlarge-screen {
+      left: calc(var(--average-offset) * -1);
+    }
   }
 
   &__text {
@@ -23,6 +29,10 @@
     &:first-of-type {
       margin: 0 0 var(--average-offset);
       padding: calc(339px / 2) 0 0;
+
+      @include xlarge-screen {
+        padding: calc(339px - 50px) 0 0;
+      }
     }
   }
 }
