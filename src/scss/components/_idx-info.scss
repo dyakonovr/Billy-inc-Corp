@@ -6,6 +6,13 @@
   &__title {
     margin: 0 0 var(--big-offset) var(--big-offset);
     color: var(--color-woodsmoke);
+
+    @include small-screen {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 0 var(--big-offset);
+    }
   }
 
   &__list {
@@ -17,10 +24,25 @@
     @include large-screen {
       padding: var(--big-offset) 0;
     }
+
+    @include small-screen {
+      flex-direction: column;
+    }
   }
 
   &__item {
     width: calc(100% / 3 - 30px);
+
+    @include small-screen {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+
+      &:not(:last-child) {
+        margin: 0 0 var(--big-offset);
+      }
+    }
   }
 
   &__img {
@@ -43,6 +65,10 @@
     &--third {
       background-image: url("../img/connection.svg");
     }
+
+    @include small-screen {
+      margin: 0 0 var(--middle-offset) 0;
+    }
   }
 
   &__subtitle {
@@ -50,6 +76,10 @@
     font: var(--font-regular);
     font-size: 27px;
     color: var(--color-woodsmoke);
+
+    @include small-screen {
+      margin: 0 0 var(--small-offset) 0;
+    }
   }
 
   &__descr {
@@ -57,5 +87,9 @@
     font-size: 17px;
     line-height: 25px;
     color: var(--color-emperor);
+
+    @include small-screen {
+      text-align: center;
+    }
   }
 }

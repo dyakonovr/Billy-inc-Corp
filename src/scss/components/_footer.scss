@@ -19,6 +19,11 @@
       justify-content: space-between;
       width: 100%;
     }
+
+    @include small-screen {
+      flex-direction: column;
+      margin: 0 0 var(--big-offset);
+    }
   }
 
   &__copyright {
@@ -82,6 +87,28 @@
   &__item {
     &:not(:last-child) {
       margin: 0 0 var(--small-offset);
+    }
+  }
+
+  &__lists {
+    display: flex;
+    margin: 0 0 0 150px;
+    width: 100%;
+
+    @include large-screen {
+      margin: 0;
+    }
+
+    @include small-screen {
+      flex-direction: column;
+    }
+  }
+
+  &__list {
+    @include small-screen {
+      &:not(:last-child) {
+        margin: 0 0 var(--average-offset);
+      }
     }
   }
 
