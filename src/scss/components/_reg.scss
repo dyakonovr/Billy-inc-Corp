@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .reg {
   background-color: var(--color-silver);
 
@@ -7,8 +9,17 @@
 
   &__left {
     padding: var(--big-offset);
-    width: 440px;
     background-color: var(--color-black);
+
+    @include xlarge-screen {
+      min-width: 400px;
+    }
+
+    @include medium-screen {
+      padding: var(--big-offset) var(--average-offset);
+      width: 100%;
+      min-width: unset;
+    }
   }
 
   &__title {
@@ -68,5 +79,13 @@
 
   &__img {
     width: 80%;
+
+    @include xlarge-screen {
+      width: 100%;
+    }
+
+    @include medium-screen {
+      display: none;
+    }
   }
 }
