@@ -151,3 +151,11 @@
     }
   }
 }
+
+.on-mobile {
+  display: none;
+
+  @include small-screen {
+    display: block;
+  }
+}

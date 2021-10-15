@@ -1,3 +1,5 @@
+@import "../mixins";
+
 .header {
   padding: var(--small-offset) 0;
   background-color: var(--color-black);
@@ -5,6 +7,10 @@
   &__container {
     display: flex;
     justify-content: space-between;
+
+    @include xlarge-screen {
+      align-items: center;
+    }
   }
 
   &__logo {
@@ -14,6 +20,10 @@
 
   &__nav {
     display: flex;
+
+    @include xlarge-screen {
+      display: none;
+    }
   }
 
   &__list {
@@ -87,7 +97,7 @@
       left: calc(var(--average-offset) * -1);
       top: 80px;
       padding: var(--big-offset) var(--average-offset);
-      width: calc(100% + var(--average-offset) + 100px);
+      min-width: 550px;
       box-shadow: 0 8px 83px rgb(8 9 16 / 7%);
       background-color: var(--color-white);
       opacity: 0;
@@ -129,6 +139,10 @@
   &__btns {
     display: flex;
     align-items: center;
+
+    @include xlarge-screen {
+      display: none;
+    }
   }
 
   &__btn {
@@ -144,6 +158,19 @@
       margin: 0 0 0 var(--average-offset);
       border: 1px solid var(--color-primary);
       padding: var(--small-offset);
+    }
+  }
+
+  &__burger {
+    display: none;
+
+    &::before,
+    &::after {
+      background-color: var(--color-white);
+    }
+
+    @include xlarge-screen {
+      display: block;
     }
   }
 }
