@@ -14,10 +14,10 @@
   "author": "MaxGraph",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.15.0",
-    "@babel/preset-env": "^7.15.0",
-    "babel-loader": "^8.2.2",
-    "browser-sync": "^2.27.5",
+    "@babel/core": "^7.16.0",
+    "@babel/preset-env": "^7.16.0",
+    "babel-loader": "^8.2.3",
+    "browser-sync": "^2.27.7",
     "del": "^6.0.0",
     "editorconfig-checker": "^4.0.2",
     "gulp": "^4.0.2",
@@ -39,10 +39,10 @@
     "gulp-svg-sprite": "^1.5.0",
     "gulp-uglify-es": "^3.0.0",
     "node-w3c-validator": "^2.0.1",
-    "sass": "^1.38.2",
+    "sass": "^1.43.4",
     "stylelint": "^13.13.1",
     "stylelint-declaration-block-no-ignored-properties": "^2.4.0",
     "stylelint-order": "^4.1.0",
-    "stylelint-scss": "^3.20.1"
+    "stylelint-scss": "^3.21.0"
   }
 }
