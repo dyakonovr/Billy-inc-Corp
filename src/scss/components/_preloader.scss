@@ -1,0 +1,41 @@
+.preloader {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 20;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--color-woodsmoke);
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+
+  &__container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  &__done {
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__percent {
+    margin: 0;
+    font: var(--font-regular);
+    font-size: 40px;
+    text-align: center;
+    color: var(--color-white);
+  }
+
+  &__progress {
+    margin: var(--average-offset) 0 var(--small-offset);
+    width: 1%;
+    height: 10px;
+    max-width: 400px;
+    background-color: var(--color-white);
+    transition: width 0.3s ease-in-out;
+  }
+}

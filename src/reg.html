@@ -14,13 +14,14 @@
 </head>
 
 <body>
+  @include('partials/preloader.html')
   <div class="site-container">
     @include('partials/header.html', {"class": "on-mobile"})
     <main>
       <section class="reg">
         <div class="reg__wrapper">
           <div class="reg__left">
-            <a href="index.html">
+            <a href="index.html" class="reg__logo">
               <img src="img/logos/logo.png" alt="Billy Inc Corp">
             </a>
             <h1 class="reg__title">Регистрация</h1>
