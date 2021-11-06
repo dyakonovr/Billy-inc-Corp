@@ -7,6 +7,8 @@ const progressDisplay = document.querySelector('.preloader__progress');
 
 if (preloader) {
 
+  scrollToggle();
+
   for (let i = 0; i < imagesTotal; i++) {
     let imageClone = new Image();
     imageClone.onload = imageLoaded;
@@ -20,11 +22,11 @@ if (preloader) {
     percentDisplay.innerHTML = percent + '%';
     progressDisplay.style.width = percent + '%';
 
-
     if (imagesLoaded >= imagesTotal) {
       setTimeout(function () {
         if (!preloader.classList.contains('preloader__done')) {
-          preloader.classList.add('preloader__done')
+          preloader.classList.add('preloader__done');
+          scrollToggle();
         }
       }, 1200)
     }
