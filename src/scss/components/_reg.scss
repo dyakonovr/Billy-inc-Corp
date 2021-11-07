@@ -9,6 +9,7 @@
 
   &__left {
     padding: var(--big-offset);
+    width: 25%;
     background-color: var(--color-black);
 
     @include xlarge-screen {
@@ -93,7 +94,7 @@
   }
 
   &__img {
-    width: 70%;
+    width: 75%;
 
     @include xlarge-screen {
       width: 100%;
